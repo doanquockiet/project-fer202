@@ -1,10 +1,10 @@
 import './App.css';
-import Layout from './components/Layout';
+import PageMenu from './components/Page/PageMenu';
 
 function App() {
   return (
     <div>
-     <Layout/>
+     <PageMenu/>
     </div>
   );
 }
