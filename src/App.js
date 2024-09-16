@@ -1,5 +1,4 @@
-import './App.css';
-import PageMenu from './components/Page/PageMenu';
+import PageMenu from "./Page/PageMenu";
 
 function App() {
   return (

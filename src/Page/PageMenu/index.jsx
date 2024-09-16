@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import menuData from '../../../data/dataMenu';
+import menuData from '../../data/dataMenu';
 import style from './style.module.css';
 
 const PageMenu = () => {
