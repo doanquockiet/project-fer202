@@ -1,7 +1,7 @@
 import React from 'react';
 import './stylecard.css';
 
-const CardProduct = ({ products }) => {
+const CardProduct = ({ products, onProductClick }) => {
   return (
     <div className='block_menu_item'>
       {products.map((productGroup, index) => (
@@ -11,15 +11,19 @@ const CardProduct = ({ products }) => {
           </h3>
           <div className='flex_wrap display_flex menu_lists menu_list_collection'>
             {productGroup.items.map((item, itemIndex) => (
-              <div key={itemIndex} className='menu_item'>
+              <div
+                key={itemIndex}
+                className='menu_item'
+                onClick={() => onProductClick(item)} 
+              >
                 <div className='menu_item_image'>
-                  <a href="!#">
+                  <a href="!#" onClick={(e) => e.preventDefault()}>
                     <img src={item.image} alt={item.name} />
                   </a>
                 </div>
                 <div className='menu_item_info'>
                   <h3>
-                    <a href="!#">{item.name}</a>
+                    <a href="!#" onClick={(e) => e.preventDefault()}>{item.name}</a>
                   </h3>
                   <div className='price_product_item'>{item.price} đ</div>
                 </div>
