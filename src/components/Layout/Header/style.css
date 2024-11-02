@@ -1,0 +1,56 @@
+.header {
+  :global(.active .carousel-item) {
+    width: 100%;
+  }
+}
+.logo {
+  height: 70px;
+  width: 100% !important;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #ff6f00;
+}
+.mega-menu {
+  position: absolute;
+  left: 0px;
+  right: 0;
+  width: 850px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item:hover .mega-menu {
+  display: block;
+}
+
+.mega-menu .row {
+  padding: 10px 10px;
+}
+
+.mega-menu h6 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.mega-menu .dropdown-item {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.mega-menu .dropdown-item:hover {
+  color: #ff6f00;
+  background-color: #f0f0f0;
+}
+
+.collapse {
+  padding-right: 140px;
+}
