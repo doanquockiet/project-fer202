@@ -7,13 +7,12 @@ const PageDetail = () => {
   const product = location.state?.product;
 
   const [selectSize, setSelectSize] = useState('');
-  const [selectToppings, setSelectToppings] = useState([]); // Multiple toppings selection
+  const [selectToppings, setSelectToppings] = useState([]);
 
   if (!product) {
     return <p>Product not found!</p>;
   }
 
-  // Handle size selection
   const handleSizeClick = (size) => {
     setSelectSize(size);
   };
@@ -40,7 +39,6 @@ const PageDetail = () => {
           <h4>{product.name}</h4>
           <p className="price-product">{product.price} đ</p>
 
-          {/* Size Selection */}
           <div className="choose-size">
             <p>Chọn size (bắt buộc)</p>
             <div className="option-size d-flex">
@@ -64,8 +62,6 @@ const PageDetail = () => {
               </button>
             </div>
           </div>
-
-          {/* Topping Selection */}
           <div className="choose-topping">
             <p>Chọn Topping</p>
             <div className="option-topping">
@@ -89,15 +85,12 @@ const PageDetail = () => {
               </button>
             </div>
           </div>
-
-          {/* Order Button */}
           <div className="button-order">
             <button>Đặt Giao Tận Nơi</button>
           </div>
         </div>
       </div>
 
-      {/* Product Description */}
       <div className="motasanpham container">
         <hr className="hr" />
         <h3>Mô tả sản phẩm</h3>

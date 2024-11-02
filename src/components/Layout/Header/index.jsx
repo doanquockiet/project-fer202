@@ -37,7 +37,7 @@ const Header = () => {
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  href="/menu"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -123,9 +123,6 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <div className="banner">
-        <Banner />
-      </div>
     </header>
   );
 };
