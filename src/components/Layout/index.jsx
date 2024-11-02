@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
-import './layout.css'
+import React, { Component } from "react";
+import "./layout.css";
+import Header from "./Header";
+import Footer from "./Footer";
 class Layout extends Component {
   render() {
     return (
       <div className="layout">
         {/* Header */}
+
         <header className="layout-header">
-          <h1>Header</h1>
+          <Header />
         </header>
 
         {/* Main content area */}
@@ -29,7 +32,8 @@ class Layout extends Component {
 
         {/* Footer */}
         <footer className="layout-footer">
-          <p>Footer</p>
+          {/* <p>Footer</p> */}
+          <Footer />
         </footer>
       </div>
     );

@@ -1,0 +1,10 @@
+.transparent-bg {
+  background-color: rgb(0, 0, 0, 0);
+}
+
+.carousel-indicators {
+  background-color: rgb(0, 0, 0, 0);
+}
+.banner img {
+  width: 100%;
+}
