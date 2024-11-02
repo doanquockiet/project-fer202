@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import './style.css';
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
+import "./style.css";
+import Footer from "../../components/Layout/Footer";
+import Header from "../../components/Layout/Header";
 
 const PageDetail = () => {
   const location = useLocation();
   const product = location.state?.product;
 
-  const [selectSize, setSelectSize] = useState('');
+  const [selectSize, setSelectSize] = useState("");
   const [selectToppings, setSelectToppings] = useState([]);
 
   if (!product) {
@@ -27,6 +29,9 @@ const PageDetail = () => {
 
   return (
     <>
+      <div>
+        <Header />
+      </div>
       <div className="container d-flex mt-3">
         <div className="product-img col-md-6">
           <img src={product.image} alt={product.name} />
@@ -43,20 +48,20 @@ const PageDetail = () => {
             <p>Chọn size (bắt buộc)</p>
             <div className="option-size d-flex">
               <button
-                onClick={() => handleSizeClick('small')}
-                className={selectSize === 'small' ? 'active' : ''}
+                onClick={() => handleSizeClick("small")}
+                className={selectSize === "small" ? "active" : ""}
               >
                 Nhỏ + 0 đ
               </button>
               <button
-                onClick={() => handleSizeClick('medium')}
-                className={selectSize === 'medium' ? 'active' : ''}
+                onClick={() => handleSizeClick("medium")}
+                className={selectSize === "medium" ? "active" : ""}
               >
                 Vừa + 6.000 đ
               </button>
               <button
-                onClick={() => handleSizeClick('large')}
-                className={selectSize === 'large' ? 'active' : ''}
+                onClick={() => handleSizeClick("large")}
+                className={selectSize === "large" ? "active" : ""}
               >
                 Lớn + 16.000 đ
               </button>
@@ -66,20 +71,20 @@ const PageDetail = () => {
             <p>Chọn Topping</p>
             <div className="option-topping">
               <button
-                onClick={() => handleToppingClick('caramel')}
-                className={selectToppings.includes('caramel') ? 'active' : ''}
+                onClick={() => handleToppingClick("caramel")}
+                className={selectToppings.includes("caramel") ? "active" : ""}
               >
                 Sốt Caramel + 10.000 đ
               </button>
               <button
-                onClick={() => handleToppingClick('espresso')}
-                className={selectToppings.includes('espresso') ? 'active' : ''}
+                onClick={() => handleToppingClick("espresso")}
+                className={selectToppings.includes("espresso") ? "active" : ""}
               >
                 Shot Espresso + 10.000 đ
               </button>
               <button
-                onClick={() => handleToppingClick('pearl')}
-                className={selectToppings.includes('pearl') ? 'active' : ''}
+                onClick={() => handleToppingClick("pearl")}
+                className={selectToppings.includes("pearl") ? "active" : ""}
               >
                 Trân Châu Trắng + 10.000 đ
               </button>
@@ -96,6 +101,9 @@ const PageDetail = () => {
         <h3>Mô tả sản phẩm</h3>
         <p>{product.description}</p>
         <hr className="hr2" />
+      </div>
+      <div>
+        <Footer />
       </div>
     </>
   );
