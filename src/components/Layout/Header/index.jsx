@@ -25,12 +25,12 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/coffee">
                   Cà phê
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/tea">
                   Trà
                 </a>
               </li>
