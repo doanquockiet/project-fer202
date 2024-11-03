@@ -1,15 +1,15 @@
-// StoreList.js
 import React from "react";
 import ListGroup from "react-bootstrap/ListGroup";
-
-const StoreList = ({ cities, onSelectCity }) => {
+import "./stores.css";
+const StoreList = ({ cities, onSelectCity, selectedCity }) => {
   return (
-    <ListGroup variant="flush" className="text-center">
+    <ListGroup variant="flush">
       {cities.map((city) => (
         <ListGroup.Item
           action
           key={city.name}
           onClick={() => onSelectCity(city.name)}
+          className={selectedCity === city.name ? "selected-city" : ""}
         >
           {city.name} ({city.count})
         </ListGroup.Item>

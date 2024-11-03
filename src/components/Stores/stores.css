@@ -1,0 +1,34 @@
+/* StoreList.css */
+.selected-city {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ff0000;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.selected-city:hover {
+  color: #d61a36;
+  cursor: pointer;
+}
+/* StoreCard.css */
+.store-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.store-card .carousel {
+  flex-shrink: 0;
+}
+
+.store-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.store-card .card-text,
+.store-card .d-flex {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
