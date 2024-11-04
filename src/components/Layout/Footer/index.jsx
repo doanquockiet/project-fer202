@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./style.css";
 
 const Footer = () => {
@@ -9,34 +10,34 @@ const Footer = () => {
             <h5>Giới thiệu</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#" className="text-white">
+                <Link to="/about" className="text-white">
                   Về Chúng Tôi
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white">
+                <Link to="/menu" className="text-white">
                   Sản phẩm
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white">
+                <Link to="/" className="text-white">
                   Khuyến mãi
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white">
+                <Link to="/blog" className="text-white">
                   Chuyện cà phê
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white">
+                <Link to="/store" className="text-white">
                   Cửa Hàng
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white">
+                <Link to="/careers" className="text-white">
                   Tuyển dụng
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -44,19 +45,19 @@ const Footer = () => {
             <h5>Điều khoản</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#" className="text-white">
+                <Link to="/terms" className="text-white">
                   Điều khoản sử dụng
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white">
+                <Link to="/privacy" className="text-white">
                   Chính sách bảo mật thông tin
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white">
+                <Link to="/invoice-guide" className="text-white">
                   Hướng dẫn xuất hóa đơn GTGT
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -82,19 +83,17 @@ const Footer = () => {
                 width="250"
                 height="150"
                 style={{ border: "none", overflow: "hidden" }}
-                scrolling="no"
-                frameBorder="0"
                 allowFullScreen={true}
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               ></iframe>
             </div>
             <div className="social-icons">
-              <a href="#" className="text-white me-3">
+              <Link to="#" className="text-white me-3">
                 <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" className="text-white">
+              </Link>
+              <Link to="#" className="text-white">
                 <i className="fab fa-instagram"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
