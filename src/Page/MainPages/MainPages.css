@@ -11,3 +11,7 @@
   max-height: 300px;
   object-fit: cover;
 }
+.divider {
+  border-left: 3px solid #716f6f;
+  height: 100%;
+}
