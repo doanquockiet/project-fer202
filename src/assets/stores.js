@@ -54,8 +54,8 @@ import img53 from "./imgStore/h54.jpg";
 import img54 from "./imgStore/h55.webp";
 
 const stores = [
-  // TP Hồ Chí Minh
   {
+    id: 1,
     name: "HCM Signature Store",
     imgStore: [
       { src: img1, alt: "Image 1" },
@@ -66,6 +66,8 @@ const stores = [
     district: "Quận 7",
     city: "TP Hồ Chí Minh",
     time: "7:00 - 22:00",
+    description:
+      "Nằm tại Quận 7, cửa hàng này mang đến không gian sang trọng và hiện đại, lý tưởng cho các buổi gặp gỡ. Phục vụ đa dạng món cà phê và thức uống, phù hợp với gia đình.",
     features: [
       { icon: "🚗", name: "Có chỗ đỗ xe hơi" },
       { icon: "👨‍👩‍👦", name: "Thân thiện với gia đình" },
@@ -73,6 +75,7 @@ const stores = [
     ],
   },
   {
+    id: 2,
     name: "HCM The Grace Tower",
     imgStore: [
       { src: img4, alt: "Image 4" },
@@ -83,6 +86,8 @@ const stores = [
     district: "Quận 7",
     city: "TP Hồ Chí Minh",
     time: "7:00 - 22:00",
+    description:
+      "Cửa hàng tọa lạc tại Grace Tower, mang đến trải nghiệm thư giãn với các món cà phê và đồ uống tươi mới. Phù hợp cho cả phục vụ tại chỗ và mang đi.",
     features: [
       { icon: "🍽️", name: "Phục vụ tại chỗ" },
       { icon: "☕", name: "Có phục vụ cà phê" },
@@ -90,6 +95,7 @@ const stores = [
     ],
   },
   {
+    id: 3,
     name: "HCM Bitexco Financial Tower",
     imgStore: [
       { src: img7, alt: "Image 7" },
@@ -100,6 +106,8 @@ const stores = [
     district: "Quận 1",
     city: "TP Hồ Chí Minh",
     time: "8:00 - 23:00",
+    description:
+      "Tọa lạc tại tòa nhà Bitexco, cửa hàng mang đến view toàn cảnh thành phố tuyệt đẹp, rất phù hợp cho những ai muốn trải nghiệm không gian sang trọng.",
     features: [
       { icon: "🌆", name: "View toàn cảnh thành phố" },
       { icon: "🍽️", name: "Phục vụ tại chỗ" },
@@ -107,6 +115,7 @@ const stores = [
     ],
   },
   {
+    id: 4,
     name: "HCM Vincom Landmark 81",
     imgStore: [
       { src: img10, alt: "Image 10" },
@@ -117,6 +126,8 @@ const stores = [
     district: "Quận Bình Thạnh",
     city: "TP Hồ Chí Minh",
     time: "9:00 - 21:00",
+    description:
+      "Nằm trong Vincom Landmark 81, đây là một điểm đến không thể bỏ qua với không gian thoải mái, món ăn phong phú và nhiều tiện ích cho khách hàng.",
     features: [
       { icon: "🛍️", name: "Trong trung tâm thương mại" },
       { icon: "🍽️", name: "Phục vụ tại chỗ" },
@@ -124,6 +135,7 @@ const stores = [
     ],
   },
   {
+    id: 5,
     name: "HCM Pearl Plaza",
     imgStore: [
       { src: img13, alt: "Image 13" },
@@ -134,6 +146,8 @@ const stores = [
     district: "Quận Bình Thạnh",
     city: "TP Hồ Chí Minh",
     time: "8:00 - 22:00",
+    description:
+      "Với không gian nằm trong Pearl Plaza, cửa hàng đem đến nhiều lựa chọn đồ uống và một không gian yên tĩnh, phù hợp cho những ai muốn thư giãn.",
     features: [
       { icon: "🛍️", name: "Trong trung tâm thương mại" },
       { icon: "🍽️", name: "Phục vụ tại chỗ" },
@@ -141,6 +155,7 @@ const stores = [
     ],
   },
   {
+    id: 6,
     name: "HCM Crescent Mall",
     imgStore: [
       { src: img16, alt: "Image 16" },
@@ -151,6 +166,8 @@ const stores = [
     district: "Quận 7",
     city: "TP Hồ Chí Minh",
     time: "9:00 - 22:00",
+    description:
+      "Cửa hàng tọa lạc tại Crescent Mall, cung cấp các món cà phê thơm ngon và dịch vụ thân thiện với gia đình, nơi lý tưởng để thư giãn vào cuối tuần.",
     features: [
       { icon: "👨‍👩‍👦", name: "Thân thiện với gia đình" },
       { icon: "🚗", name: "Có chỗ đỗ xe hơi" },
@@ -158,6 +175,7 @@ const stores = [
     ],
   },
   {
+    id: 7,
     name: "HCM Diamond Plaza",
     imgStore: [
       { src: img19, alt: "Image 19" },
@@ -168,6 +186,8 @@ const stores = [
     district: "Quận 1",
     city: "TP Hồ Chí Minh",
     time: "8:30 - 21:30",
+    description:
+      "Diamond Plaza là một trung tâm thương mại nổi tiếng, cửa hàng tại đây cung cấp dịch vụ đa dạng và không gian sang trọng cho khách hàng.",
     features: [
       { icon: "🛍️", name: "Trong trung tâm thương mại" },
       { icon: "🍽️", name: "Phục vụ tại chỗ" },
@@ -175,6 +195,7 @@ const stores = [
     ],
   },
   {
+    id: 8,
     name: "HCM Vincom Thảo Điền",
     imgStore: [
       { src: img22, alt: "Image 22" },
@@ -185,6 +206,8 @@ const stores = [
     district: "Quận 2",
     city: "TP Hồ Chí Minh",
     time: "9:00 - 22:00",
+    description:
+      "Nằm trong Vincom Thảo Điền, cửa hàng cung cấp không gian hiện đại và thư giãn. Thích hợp cho các buổi gặp mặt và tiện lợi để mua mang đi.",
     features: [
       { icon: "🛍️", name: "Trong trung tâm thương mại" },
       { icon: "🍽️", name: "Phục vụ tại chỗ" },
@@ -192,6 +215,7 @@ const stores = [
     ],
   },
   {
+    id: 9,
     name: "HCM Nowzone Mall",
     imgStore: [
       { src: img25, alt: "Image 25" },
@@ -202,6 +226,8 @@ const stores = [
     district: "Quận 5",
     city: "TP Hồ Chí Minh",
     time: "8:30 - 22:00",
+    description:
+      "Tọa lạc trong Nowzone Mall, cửa hàng là điểm đến quen thuộc với những món đồ uống hấp dẫn và không gian thoải mái, đặc biệt phù hợp với các gia đình.",
     features: [
       { icon: "🛍️", name: "Trong trung tâm thương mại" },
       { icon: "🍽️", name: "Phục vụ tại chỗ" },
@@ -209,6 +235,7 @@ const stores = [
     ],
   },
   {
+    id: 10,
     name: "HCM Saigon Centre",
     imgStore: [
       { src: img28, alt: "Image 28" },
@@ -219,15 +246,16 @@ const stores = [
     district: "Quận 1",
     city: "TP Hồ Chí Minh",
     time: "8:00 - 22:00",
+    description:
+      "Nằm trong trung tâm Saigon Centre với view đẹp, cửa hàng mang đến trải nghiệm thư giãn cho những ai muốn thưởng thức cà phê tại chỗ.",
     features: [
       { icon: "🌆", name: "View đẹp" },
       { icon: "🍽️", name: "Phục vụ tại chỗ" },
       { icon: "🥡", name: "Mua mang đi" },
     ],
   },
-
-  // Hải Phòng
   {
+    id: 11,
     name: "HP Cầu Đất",
     imgStore: [
       { src: img31, alt: "Image 31" },
@@ -238,6 +266,8 @@ const stores = [
     district: "Quận Ngô Quyền",
     city: "Hải Phòng",
     time: "7:00 - 22:00",
+    description:
+      "Cửa hàng tại Cầu Đất có không gian rộng rãi và thoải mái, lý tưởng cho các buổi gặp gỡ bạn bè và mua mang đi.",
     features: [
       { icon: "🚗", name: "Có chỗ đỗ xe hơi" },
       { icon: "🥡", name: "Mua mang đi" },
@@ -245,6 +275,7 @@ const stores = [
     ],
   },
   {
+    id: 12,
     name: "HP Vincom Imperia",
     imgStore: [
       { src: img34, alt: "Image 34" },
@@ -255,6 +286,8 @@ const stores = [
     district: "Quận Hồng Bàng",
     city: "Hải Phòng",
     time: "8:00 - 22:00",
+    description:
+      "Cửa hàng nằm trong Vincom Imperia, mang đến không gian hiện đại và thoải mái cho khách hàng, với nhiều tiện ích và dịch vụ tại chỗ.",
     features: [
       { icon: "🛍️", name: "Trong trung tâm thương mại" },
       { icon: "🍽️", name: "Phục vụ tại chỗ" },
@@ -262,6 +295,7 @@ const stores = [
     ],
   },
   {
+    id: 13,
     name: "HP Lạch Tray",
     imgStore: [
       { src: img37, alt: "Image 37" },
@@ -272,6 +306,8 @@ const stores = [
     district: "Quận Ngô Quyền",
     city: "Hải Phòng",
     time: "7:30 - 21:30",
+    description:
+      "Tọa lạc trên đường Lạch Tray, cửa hàng cung cấp dịch vụ thân thiện, thích hợp cho cả gia đình và có chỗ đỗ xe tiện lợi.",
     features: [
       { icon: "🚗", name: "Có chỗ đỗ xe hơi" },
       { icon: "🥡", name: "Mua mang đi" },
@@ -279,6 +315,7 @@ const stores = [
     ],
   },
   {
+    id: 14,
     name: "HP Đồ Sơn",
     imgStore: [
       { src: img40, alt: "Image 40" },
@@ -289,15 +326,16 @@ const stores = [
     district: "Quận Đồ Sơn",
     city: "Hải Phòng",
     time: "8:00 - 22:00",
+    description:
+      "Cửa hàng gần biển Đồ Sơn, với view đẹp và là nơi lý tưởng để thư giãn sau những giờ dạo chơi bãi biển.",
     features: [
       { icon: "🌊", name: "Gần biển" },
       { icon: "🍽️", name: "Phục vụ tại chỗ" },
       { icon: "🥡", name: "Mua mang đi" },
     ],
   },
-
-  // Thanh Hóa
   {
+    id: 15,
     name: "TH Vincom Plaza Thanh Hóa",
     imgStore: [
       { src: img43, alt: "Image 43" },
@@ -308,6 +346,8 @@ const stores = [
     district: "TP Thanh Hóa",
     city: "Thanh Hóa",
     time: "9:00 - 21:00",
+    description:
+      "Nằm trong Vincom Plaza Thanh Hóa, cửa hàng là điểm đến lý tưởng với dịch vụ chất lượng và không gian tiện nghi.",
     features: [
       { icon: "🛍️", name: "Trong trung tâm thương mại" },
       { icon: "🍽️", name: "Phục vụ tại chỗ" },
@@ -315,6 +355,7 @@ const stores = [
     ],
   },
   {
+    id: 16,
     name: "TH Big C Thanh Hóa",
     imgStore: [
       { src: img46, alt: "Image 46" },
@@ -325,14 +366,16 @@ const stores = [
     district: "TP Thanh Hóa",
     city: "Thanh Hóa",
     time: "8:00 - 22:00",
+    description:
+      "Cửa hàng tọa lạc trong Big C Thanh Hóa, thuận tiện cho khách hàng có nhu cầu mua sắm và thưởng thức cà phê ngay trong trung tâm.",
     features: [
       { icon: "🛍️", name: "Trong trung tâm thương mại" },
       { icon: "🍽️", name: "Phục vụ tại chỗ" },
       { icon: "🥡", name: "Mua mang đi" },
     ],
   },
-  // Nha Trang
   {
+    id: 17,
     name: "NT Tran Phu Beachfront",
     imgStore: [
       { src: img49, alt: "Image 49" },
@@ -343,6 +386,8 @@ const stores = [
     district: "Quận Nha Trang",
     city: "Nha Trang",
     time: "7:00 - 22:00",
+    description:
+      "Cửa hàng gần biển Trần Phú, mang đến không gian thư giãn với view biển tuyệt đẹp, thích hợp cho cả gia đình và du khách.",
     features: [
       { icon: "🌊", name: "Gần biển" },
       { icon: "🍽️", name: "Phục vụ tại chỗ" },
@@ -350,6 +395,7 @@ const stores = [
     ],
   },
   {
+    id: 18,
     name: "NT Vincom Plaza",
     imgStore: [
       { src: img52, alt: "Image 2" },
@@ -360,6 +406,8 @@ const stores = [
     district: "Quận Nha Trang",
     city: "Nha Trang",
     time: "8:00 - 22:00",
+    description:
+      "Cửa hàng nằm trong Vincom Plaza tại Nha Trang, cung cấp không gian thoải mái và thân thiện cho gia đình với dịch vụ mua mang đi tiện lợi.",
     features: [
       { icon: "🛍️", name: "Trong trung tâm thương mại" },
       { icon: "👨‍👩‍👦", name: "Thân thiện với gia đình" },
