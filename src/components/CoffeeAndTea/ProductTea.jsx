@@ -1,29 +1,27 @@
 import React from "react";
-import { Card, Col, Row } from "react-bootstrap";
-import { Coffees } from "../../data/coffee";
-import { useNavigate } from "react-router-dom";
-import Header from "../Layout/Header";
 
-export default function Coffee() {
-  const navigate = useNavigate();
+import { Teas } from "../../data/tea";
+import { Card, Col, Row } from "react-bootstrap";
+
+export default function ProuctTea() {
   return (
     <div className="container">
-      <Header />
-      <Row className="row-cols-1 row-cols-md-2 row-cols-lg-4 container-j">
-        {Coffees.map((newpage) => (
+      <Row className="row-cols-1 row-cols-md-2 row-cols-lg-6 ">
+        {Teas.map((newpage) => (
           <Col key={newpage.id} className="news-card">
-            <Card style={{ height: "500px", border: "none" }} onClick={() => navigate(`/coffee/${newpage?.id}`)}>
+            <Card style={{ height: "400px", border: "none" }}>
               <Card.Img
                 variant="top"
                 style={{
                   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
                   height: "300px",
                   objectFit: "cover",
+                  height: "300px",
                   borderRadius: "5px",
                 }}
                 src={newpage.image}
               />
-              <Card.Body >
+              <Card.Body>
                 <Card.Title style={{ fontSize: "18px", textAlign: "start" }}>
                   {newpage.title}
                 </Card.Title>
@@ -31,16 +29,6 @@ export default function Coffee() {
                   {newpage.price}
                 </Card.Text>
               </Card.Body>
-              <div
-                className=""
-                style={{
-                  marginLeft: "10px",
-                  marginRight: "10px",
-                  marginBottom: "10px",
-                  justifyContent: "space-between",
-                  display: "flex",
-                }}
-              ></div>
             </Card>
           </Col>
         ))}

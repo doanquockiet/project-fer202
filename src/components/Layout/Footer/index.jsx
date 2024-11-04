@@ -10,7 +10,7 @@ const Footer = () => {
             <h5>Giới thiệu</h5>
             <ul className="list-unstyled">
               <li>
-                <Link to="/about" className="text-white">
+                <Link to="/chuyen-nha" className="text-white">
                   Về Chúng Tôi
                 </Link>
               </li>
