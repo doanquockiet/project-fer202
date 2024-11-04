@@ -149,3 +149,15 @@
     background-color: #fffce7;
     padding: 30px;
 }
+
+
+
+.page_tabs li:hover {
+    background-color: #ffd1a9;
+}
+
+.page_tabs li.active {
+    background-color: #ff8c00;
+    color: white;
+
+}

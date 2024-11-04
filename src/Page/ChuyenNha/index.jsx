@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../../components/Layout/Header'
 import './styleChuyenNha.css'
 import BlogPost from '../../components/BlogPost';
@@ -27,6 +27,12 @@ const ChuyenNhaPage = () => {
             link: "#",
         }
     ];
+
+    const [activeTab, setActiveTab] = useState("Tất Cả"); 
+
+    const handleTabClick = (tab) => {
+        setActiveTab(tab);
+    };
     return (
         <>
             <div className="header">
@@ -42,11 +48,16 @@ const ChuyenNhaPage = () => {
                 </div>
                 <div className="tabs_chuyennha">
                     <div className="container">
-                        <ul className='page_tabs mt-3'>
-                            <li>Tất Cả </li>
-                            <li>Coffeeholic</li>
-                            <li>Teaholic</li>
-                            <li>Blog</li>
+                        <ul className="page_tabs mt-3">
+                            {["Tất Cả", "Coffeeholic", "Teaholic", "Blog"].map((tab) => (
+                                <li
+                                    key={tab}
+                                    onClick={() => handleTabClick(tab)}
+                                    className={activeTab === tab ? "active" : ""}
+                                >
+                                    {tab}
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
