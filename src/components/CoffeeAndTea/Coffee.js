@@ -12,7 +12,7 @@ export default function Coffee() {
       <Row className="row-cols-1 row-cols-md-2 row-cols-lg-4 container-j">
         {Coffees.map((newpage) => (
           <Col key={newpage.id} className="news-card">
-            <Card style={{ height: "500px", border: "none" }}>
+            <Card style={{ height: "500px", border: "none" }} onClick={() => navigate(`/coffee/${newpage?.id}`)}>
               <Card.Img
                 variant="top"
                 style={{
@@ -23,7 +23,7 @@ export default function Coffee() {
                 }}
                 src={newpage.image}
               />
-              <Card.Body onClick={() => navigate(`/event/${newpage?.id}`)}>
+              <Card.Body >
                 <Card.Title style={{ fontSize: "18px", textAlign: "start" }}>
                   {newpage.title}
                 </Card.Title>
