@@ -1,10 +1,10 @@
-// MainPage.js
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import StoreList from "../../components/Stores/StoreList.js.js";
+import StoreList from "../../components/Stores/StoreList.js";
 import CityStores from "../../components/Stores/CityStores.js";
 import stores from "../../assets/stores.js";
 import banner from "../../assets/images/banner2.png";
@@ -13,8 +13,9 @@ import Header from "../../components/Layout/Header/index.jsx";
 import Footer from "../../components/Layout/Footer/index.jsx";
 
 const MainPage = () => {
-  const [selectedCity, setSelectedCity] = useState("Nha Trang");
+  const [selectedCity, setSelectedCity] = useState("TP Hồ Chí Minh");
   const [selectedDistrict, setSelectedDistrict] = useState("");
+  const [visibleStoresCount, setVisibleStoresCount] = useState(4); // Initial display limit
 
   // Calculate the number of stores for each city dynamically
   const cities = stores.reduce((acc, store) => {
@@ -46,47 +47,69 @@ const MainPage = () => {
     ),
   ];
 
+  // Show only the number of stores defined by visibleStoresCount
+  const visibleStores = cityStores.slice(0, visibleStoresCount);
+
+  // Handle "Show More" button click
+  const handleShowMore = () => {
+    setVisibleStoresCount((prevCount) => prevCount + 4); // Load 4 more stores on each click
+  };
+
   return (
-    <Container fluid>
-      <div>
-        {" "}
-        <Header />
-      </div>
-
+    <div>
+      <Header />
       <img src={banner} alt="Promotional Banner" className="banner-image" />
-      <Row>
-        <Col md={3} className="text-center">
-          <h5>Theo khu vực</h5>
-          <StoreList cities={cities} onSelectCity={setSelectedCity} />
-        </Col>
-        <Col md={9}>
-          <h5>
-            Khám phá {cityStores.length} cửa hàng của chúng tôi ở {selectedCity}
-          </h5>
-
-          {/* Province/District Filter Dropdown */}
-          <Form.Select
-            aria-label="Select District"
-            className="mb-4"
-            onChange={(e) => setSelectedDistrict(e.target.value)}
-            value={selectedDistrict}
+      <Container className="pt-5 pb-4">
+        <Row>
+          <Col md={2} className="text-center">
+            <h5>Theo khu vực</h5>
+            <StoreList
+              cities={cities}
+              onSelectCity={setSelectedCity}
+              selectedCity={selectedCity}
+            />
+          </Col>
+          <Col
+            md={1}
+            className="d-flex justify-content-center align-items-center"
           >
-            <option value="">Quận/Huyện</option>
-            {districts.map((district, index) => (
-              <option key={index} value={district}>
-                {district}
-              </option>
-            ))}
-          </Form.Select>
+            <hr className="divider" />
+          </Col>
+          <Col md={9}>
+            <h5>
+              Khám phá {cityStores.length} cửa hàng của chúng tôi ở{" "}
+              {selectedCity}
+            </h5>
 
-          <CityStores stores={cityStores} />
-        </Col>
-      </Row>
-      <div>
-        {" "}
-        <Footer />
-      </div>
-    </Container>
+            {/* Province/District Filter Dropdown */}
+            <Form.Select
+              aria-label="Select District"
+              className="mb-4"
+              onChange={(e) => setSelectedDistrict(e.target.value)}
+              value={selectedDistrict}
+            >
+              <option value="">Quận/Huyện</option>
+              {districts.map((district, index) => (
+                <option key={index} value={district}>
+                  {district}
+                </option>
+              ))}
+            </Form.Select>
+            <CityStores stores={visibleStores} />
+            {visibleStoresCount < cityStores.length && (
+              <Row className="mt-5 p">
+                <Col className="d-flex justify-content-center">
+                  <Button onClick={handleShowMore} variant="light">
+                    Xem thêm
+                  </Button>
+                </Col>
+              </Row>
+            )}
+          </Col>
+        </Row>
+      </Container>
+      <Footer />
+    </div>
   );
 };
 
