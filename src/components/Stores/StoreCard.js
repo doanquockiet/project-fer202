@@ -1,26 +1,31 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import Carousel from "react-bootstrap/Carousel";
-import Button from "react-bootstrap/Button";
-import ListGroup from "react-bootstrap/ListGroup";
+import { Link } from "react-router-dom";
+import { Card, Button, ListGroup, Carousel } from "react-bootstrap";
 import { FaFacebook, FaInstagram, FaLink } from "react-icons/fa";
 import { SiZalo } from "react-icons/si";
 import "./stores.css";
 
 const StoreCard = ({ store }) => {
   return (
-    <Card className="store-card mb-4 h-100">
-      {" "}
-      <Carousel>
-        {store.imgStore.map((image, index) => (
-          <Carousel.Item key={index}>
-            <img className="caroimg d-block w-100" src={image.src} alt={image.alt} />
-          </Carousel.Item>
-        ))}
-      </Carousel>
+    <Card className="store-card mb-2 h-100">
+      <Link to={`/store/${store.id}`}>
+        <Carousel>
+          {store.imgStore.map((image, index) => (
+            <Carousel.Item key={index}>
+              <img
+                className="caroimg d-block w-100"
+                src={image.src}
+                alt={image.alt}
+              />
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </Link>
       <Card.Body className="d-flex flex-column">
+        <Link to={`/store/${store.id}`} className="text-decoration-none">
+          <Card.Title className="store-card-title">{store.name}</Card.Title>
+        </Link>
         <div>
-          <Card.Title>{store.name}</Card.Title>
           <Button
             variant="secondary"
             className="mb-3 w-100"
@@ -46,7 +51,7 @@ const StoreCard = ({ store }) => {
             </ListGroup>
           </div>
           <div className="border border-bottom-6 mb-3" />
-          <Card.Text>
+          <Card.Text className="text-black">
             <strong>Địa chỉ:</strong> {store.address}
             <br />
             <strong>Giờ mở cửa:</strong> {store.time}
