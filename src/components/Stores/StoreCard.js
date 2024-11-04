@@ -12,9 +12,9 @@ const StoreCard = ({ store }) => {
     <Card className="store-card mb-4 h-100">
       {" "}
       <Carousel>
-        {store.images.map((image, index) => (
+        {store.imgStore.map((image, index) => (
           <Carousel.Item key={index}>
-            <img className="d-block w-100" src={image.src} alt={image.alt} />
+            <img className="caroimg d-block w-100" src={image.src} alt={image.alt} />
           </Carousel.Item>
         ))}
       </Carousel>
