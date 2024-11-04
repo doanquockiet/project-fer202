@@ -23,7 +23,7 @@ export default function Coffee() {
                 }}
                 src={newpage.image}
               />
-              <Card.Body onClick={() => navigate(`/event/${newpage?.id}`)}>
+              <Card.Body onClick={() => navigate(`/products/${newpage?.id}`)}>
                 <Card.Title style={{ fontSize: "18px", textAlign: "start" }}>
                   {newpage.title}
                 </Card.Title>

@@ -14,7 +14,7 @@ export default function Tea() {
         <Col key={newpage.id} className="news-card">
           <Card style={{height:'500px', border:'none'}}>
             <Card.Img variant="top" style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',height: '300px',objectFit: 'cover', height:'300px', borderRadius:'5px'}} src={newpage.image} />
-            <Card.Body onClick ={() => navigate(`/event/${newpage?.id}`)}>
+            <Card.Body onClick ={() => navigate(`/products/${newpage?.id}`)}>
               <Card.Title style={{fontSize:'18px', textAlign:'start'}}>{newpage.title}</Card.Title>
               <Card.Text style={{textAlign:"start"}}>{newpage.price}</Card.Text>
              </Card.Body>
