@@ -13,7 +13,11 @@ const Header = () => {
             style={{ background: "none" }}
             to="/"
           >
-            <img src="assets/logo.jpg" alt="logo" className="logo" />
+            <img
+              src={require("../Header/img/logo.jpg")}
+              alt="logo"
+              className="logo"
+            />
           </NavLink>
           <button
             className="navbar-toggler"

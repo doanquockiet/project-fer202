@@ -1,0 +1,36 @@
+.customTabs {
+  margin-top: 30px;
+  border: none;
+
+  svg {
+    margin-bottom: 3px;
+  }
+}
+
+.customTabs li button {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  color: black;
+}
+
+.active {
+  border-bottom: red 2px solid !important;
+}
+
+li button {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  color: black !important;
+}
+
+.active {
+  border-bottom: red 2px solid !important;
+}
+
+.tabsCustomiseIconButton {
+  svg {
+    margin-bottom: 20px;
+  }
+}
