@@ -1,4 +1,4 @@
-/* StoreList.css */
+/* StoreList */
 .selected-city {
   font-size: 1rem;
   font-weight: bold;
@@ -11,7 +11,7 @@
   color: #d61a36;
   cursor: pointer;
 }
-/* StoreCard.css */
+/* StoreCard */
 .store-card {
   display: flex;
   flex-direction: column;
@@ -37,4 +37,13 @@
   height: 300px;
   object-fit: cover;
   border-radius: 3px;
+  transition: transform 0.3s ease;
+}
+.caroimg:hover {
+  transform: scale(1.1);
+}
+.store-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
 }

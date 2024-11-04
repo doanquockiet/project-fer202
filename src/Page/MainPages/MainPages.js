@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import StoreList from "../../components/Stores/StoreList.js";
 import CityStores from "../../components/Stores/CityStores.js";
 import stores from "../../assets/stores.js";
@@ -15,9 +11,7 @@ import Footer from "../../components/Layout/Footer/index.jsx";
 const MainPage = () => {
   const [selectedCity, setSelectedCity] = useState("TP Hồ Chí Minh");
   const [selectedDistrict, setSelectedDistrict] = useState("");
-  const [visibleStoresCount, setVisibleStoresCount] = useState(4); // Initial display limit
-
-  // Calculate the number of stores for each city dynamically
+  const [visibleStoresCount, setVisibleStoresCount] = useState(4);
   const cities = stores.reduce((acc, store) => {
     const cityName = store.city;
     const existingCity = acc.find((city) => city.name === cityName);
@@ -31,14 +25,12 @@ const MainPage = () => {
     return acc;
   }, []);
 
-  // Filter stores by the selected city and selected district
   const cityStores = stores.filter(
     (store) =>
       store.city === selectedCity &&
       (selectedDistrict === "" || store.district === selectedDistrict)
   );
 
-  // Get unique districts for the selected city
   const districts = [
     ...new Set(
       stores
@@ -47,12 +39,10 @@ const MainPage = () => {
     ),
   ];
 
-  // Show only the number of stores defined by visibleStoresCount
   const visibleStores = cityStores.slice(0, visibleStoresCount);
 
-  // Handle "Show More" button click
   const handleShowMore = () => {
-    setVisibleStoresCount((prevCount) => prevCount + 4); // Load 4 more stores on each click
+    setVisibleStoresCount((prevCount) => prevCount + 4);
   };
 
   return (
@@ -80,8 +70,6 @@ const MainPage = () => {
               Khám phá {cityStores.length} cửa hàng của chúng tôi ở{" "}
               {selectedCity}
             </h5>
-
-            {/* Province/District Filter Dropdown */}
             <Form.Select
               aria-label="Select District"
               className="mb-4"

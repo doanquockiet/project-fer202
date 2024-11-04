@@ -9,7 +9,7 @@ import ChuyenNhaPage from "./Page/ChuyenNha";
 import ChuyenCaPhe from "./Page/PageChuyenCaPhe";
 import TeaDetail from "./components/CoffeeAndTea/TeaDetail";
 import CoffeeDetail from "./components/CoffeeAndTea/CoffeeDetail";
-
+import DetailsPage from "./components/Stores/DetailsPage";
 function App() {
   return (
     <BrowserRouter>
@@ -22,8 +22,9 @@ function App() {
         <Route path="/cua-hang" element={<MainPages />} />
         <Route path="/chuyen-nha" element={<ChuyenNhaPage />} />
         <Route path="/chuyen-ca-phe" element={<ChuyenCaPhe />} />
-        <Route path="/tea/:id" element={<TeaDetail/>}/>
-        <Route path="/coffee/:id" element={<CoffeeDetail/>}/>
+        <Route path="/tea/:id" element={<TeaDetail />} />
+        <Route path="/coffee/:id" element={<CoffeeDetail />} />
+        <Route path="/store/:storeId" element={<DetailsPage />} />
       </Routes>
     </BrowserRouter>
   );
