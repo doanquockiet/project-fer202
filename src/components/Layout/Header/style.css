@@ -54,3 +54,7 @@
 .collapse {
   padding-right: 140px;
 }
+.dropdown-menu .dropdown-item {
+  background-color: transparent !important;
+  color: #000; /* Màu chữ bạn mong muốn */
+}

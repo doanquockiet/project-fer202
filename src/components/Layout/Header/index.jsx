@@ -1,16 +1,20 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
-import Banner from "../../Banner";
 
 const Header = () => {
   return (
     <header className="header">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light ">
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <NavLink
+            className="navbar-brand"
+            style={{ background: "none" }}
+            to="/"
+          >
             <img src="assets/logo.jpg" alt="logo" className="logo" />
-          </a>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -25,27 +29,26 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link" href="/coffee">
+                <NavLink className="nav-link" to="/coffee">
                   Cà phê
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/tea">
+                <NavLink className="nav-link" to="/tea">
                   Trà
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item dropdown">
-                <a
+                <NavLink
                   className="nav-link dropdown-toggle"
-                  href="/menu"
+                  to="/menu"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Menu
-                </a>
-
+                </NavLink>
                 <div className="dropdown-menu mega-menu">
                   <div className="row">
                     <div className="col-sm-2">
@@ -53,71 +56,71 @@ const Header = () => {
                     </div>
                     <div className="col-sm-2">
                       <h6>Cà Phê</h6>
-                      <a className="dropdown-item" href="#">
-                        Cà Phê Highlight
-                      </a>
-                      <a className="dropdown-item" href="#">
+                      <NavLink className="dropdown-item" to="/menu">
                         Cà Phê Việt Nam
-                      </a>
-                      <a className="dropdown-item" href="#">
+                      </NavLink>
+                      <NavLink className="dropdown-item" to="/menu">
                         Cà Phê Máy
-                      </a>
-                      <a className="dropdown-item" href="#">
+                      </NavLink>
+                      <NavLink className="dropdown-item" to="/menu">
                         Cold Brew
-                      </a>
+                      </NavLink>
                     </div>
                     <div className="col-sm-2">
                       <h6>Trái Cây Xay 0°C</h6>
-                      <a className="dropdown-item" href="#">
+                      <NavLink className="dropdown-item" to="/menu">
                         Trái Cây
-                      </a>
+                      </NavLink>
                     </div>
                     <div className="col-sm-2">
                       <h6>Trà Trái Cây - HiTea</h6>
-                      <a className="dropdown-item" href="#">
+                      <NavLink className="dropdown-item" to="/menu">
                         Trà Trái Cây
-                      </a>
-                      <a className="dropdown-item" href="#">
+                      </NavLink>
+                      <NavLink className="dropdown-item" to="/menu">
                         Hi-Tea
-                      </a>
+                      </NavLink>
                     </div>
                     <div className="col-sm-2">
                       <h6>Trà Sữa</h6>
-                      <a className="dropdown-item" href="#">
+                      <NavLink className="dropdown-item" to="/menu">
                         Trà Sữa
-                      </a>
+                      </NavLink>
                     </div>
                     <div className="col-sm-2">
                       <h6>Trà Xanh - Chocolate</h6>
-                      <a className="dropdown-item" href="#">
+                      <NavLink className="dropdown-item" to="/menu">
                         Trà Xanh Tây Bắc
-                      </a>
-                      <a className="dropdown-item" href="#">
+                      </NavLink>
+                      <NavLink className="dropdown-item" to="/menu">
                         Chocolate
-                      </a>
+                      </NavLink>
                     </div>
                   </div>
                 </div>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="#">
                   Chuyện Nhà
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="#">
                   Cảm hứng CloudFee
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/cua-hang">
+                <NavLink className="nav-link" to="/cua-hang">
                   Cửa hàng
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink
+                  className="nav-link"
+                  to="https://tuyendung.thecoffeehouse.com/"
+                >
                   Tuyển dụng
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>
