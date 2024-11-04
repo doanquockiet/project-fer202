@@ -55,7 +55,7 @@ const PageMenu = () => {
                       selectedCategory === null ? style.active : ""
                     }`}
                     onClick={() => handleCategoryClick(null)}
-                    role="button" // Accessibility improvement for keyboard navigation
+                    role="button"
                   >
                     Tất Cả
                   </span>
