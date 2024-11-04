@@ -5,6 +5,7 @@ import PageMenu from "./Page/PageMenu";
 import Coffee from "./components/CoffeeAndTea/Coffee";
 import Tea from "./components/CoffeeAndTea/Tea";
 import MainPages from "./Page/MainPages/MainPages";
+import ChuyenCaPhe from "./Page/PageChuyenCaPhe";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/coffee" element={<Coffee />} />
         <Route path="/tea" element={<Tea />} />
         <Route path="/cua-hang" element={<MainPages />} />
+        <Route path="/chuyen-ca-phe" element={<ChuyenCaPhe />} />
       </Routes>
     </BrowserRouter>
   );
