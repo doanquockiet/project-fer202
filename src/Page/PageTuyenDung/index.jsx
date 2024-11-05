@@ -27,7 +27,7 @@ const TuyenDung = () => {
 
     return (
         <>
-            <div className="header d-flex">
+            <div className="header_tuyendung d-flex">
                 <div className="header-logo">
                     <img src="assets/logo-tuyendung.webp" alt="" />
                 </div>
