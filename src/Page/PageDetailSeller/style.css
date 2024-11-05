@@ -1,0 +1,139 @@
+.poduct-img img {
+    width: 570px;
+    height: 570px;
+}
+
+.thumnail-img img {
+    width: 75px;
+    height: 75px;
+    border-radius: 8px;
+    border: 2px solid orange;
+}
+
+.product-infor h4 {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.price-product {
+    font-size: 26px;
+    color: #E57905;
+    font-weight: 600;
+}
+
+.choose-size p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #4f4f4f;
+}
+
+.option-size button {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 5px;
+    height: 40px;
+    margin-right: 16px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #666666;
+    border: 1px solid #666666;
+}
+
+.choose-toping p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #4f4f4f;
+}
+
+.option-topping {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.option-topping button {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 5px;
+    height: 40px;
+    margin-right: 16px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #666666;
+    border: 1px solid #666666;
+}
+
+.button-order {
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.button-order button {
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    padding: 0 25px;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    margin-right: 16px;
+    font-size: 14px;
+    background-color: #E57905;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    border: 1px solid #666666;
+}
+
+button.active {
+    background-color: orange;
+    color: white;
+    border-color: orange;
+}
+
+.motasanpham h3 {
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.motasanpham p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #373535;
+}
+
+.hr {
+    padding-bottom: 20px;
+}
+
+.hr2 {
+    padding-bottom: 20px;
+}
+
+.active {
+    background-color: #FFD700;
+    /* Example highlight color */
+    color: white;
+}
+
+.choose-size .option-size button,
+.choose-topping .option-topping button {
+    margin-right: 10px;
+}
+
+.thnai img {
+    width: 10%;
+    border: 1px solid #E57905;
+}

@@ -1,16 +1,20 @@
 import React from "react";
-import products from "../../data/bestseller.js";
 import "./style.css";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const BestSeller = () => {
-  const bestSellers = products.filter((product) => product.isBestSeller);
+  const bestSellers = useSelector((state) => state.bestseller.products);
+
   const bannerProducts = bestSellers.filter(
     (product) => product.id === 1 || product.id === 2
   );
 
+  const otherBestSellers = bestSellers.filter(
+    (product) => product.id !== 1 && product.id !== 2
+  );
   return (
-    <div className="bestseller container  ">
+    <div className="bestseller container">
       <div className="top-row">
         <NavLink className="banner" to={"/menu"}>
           <img
@@ -34,19 +38,17 @@ const BestSeller = () => {
       </div>
 
       <div className="bottom-row">
-        {bestSellers
-          .filter((product) => product.id !== 1 && product.id !== 2)
-          .map((product) => (
-            <div key={product.id} className="bestseller-item">
-              <img
-                src={product.imageUrl}
-                alt={product.name}
-                className="card-img-top"
-              />
-              <h3 className="card-title">{product.name}</h3>
-              <p className="card-text">{product.price}</p>
-            </div>
-          ))}
+        {otherBestSellers.map((product) => (
+          <div key={product.id} className="bestseller-item">
+            <img
+              src={product.imageUrl}
+              alt={product.name}
+              className="card-img-top"
+            />
+            <h3 className="card-title">{product.name}</h3>
+            <p className="card-text">{product.price}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

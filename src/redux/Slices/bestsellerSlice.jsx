@@ -1,4 +1,5 @@
-const products = [
+import { createSlice } from "@reduxjs/toolkit";
+export const products = [
   {
     id: 1,
     name: "Bơ Sữa Phô Mai Tươi",
@@ -49,4 +50,13 @@ const products = [
   },
 ];
 
-export default products;
+const bestsellerSlice = createSlice({
+  name: "bestseller",
+  initialState: {
+    products,
+  },
+  reducers: {},
+});
+
+export default bestsellerSlice.reducer;
+export const {} = bestsellerSlice.actions;
