@@ -26,7 +26,6 @@ export default function Tea() {
                     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
                     height: "300px",
                     objectFit: "cover",
-                    height: "300px",
                     borderRadius: "5px",
                   }}
                   src={newpage.image}

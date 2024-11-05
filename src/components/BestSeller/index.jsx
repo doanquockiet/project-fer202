@@ -1,6 +1,7 @@
 import React from "react";
 import products from "../../data/bestseller.js";
 import "./style.css";
+import { NavLink } from "react-router-dom";
 
 const BestSeller = () => {
   const bestSellers = products.filter((product) => product.isBestSeller);
@@ -11,13 +12,13 @@ const BestSeller = () => {
   return (
     <div className="bestseller container  ">
       <div className="top-row">
-        <div className="banner">
+        <NavLink className="banner" to={"/menu"}>
           <img
             src="assets/banner_seller.jpg"
             alt="Banner"
             className="banner-image"
           />
-        </div>
+        </NavLink>
         {bannerProducts.map((product) => (
           <div key={product.id} className="banner-product-item">
             <img
