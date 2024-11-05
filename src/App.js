@@ -10,7 +10,11 @@ import ChuyenCaPhe from "./Page/PageChuyenCaPhe";
 import TeaDetail from "./components/CoffeeAndTea/TeaDetail";
 import CoffeeDetail from "./components/CoffeeAndTea/CoffeeDetail";
 import DetailsPage from "./components/Stores/DetailsPage";
+
 import TuyenDung from "./Page/PageTuyenDung";
+
+import CamHung from "./Page/CloudFeePage";
+import CloudFeePage from "./Page/CloudFeePage";
 function App() {
   return (
     <BrowserRouter>
@@ -27,6 +31,7 @@ function App() {
         <Route path="/coffee/:id" element={<CoffeeDetail />} />
         <Route path="/store/:storeId" element={<DetailsPage />} />
         <Route path="/tuyen-dung" element={<TuyenDung />} />
+        <Route path="/cloudfee-the-he-ca-phe-moi" element={<CloudFeePage />} />
       </Routes>
     </BrowserRouter>
   );

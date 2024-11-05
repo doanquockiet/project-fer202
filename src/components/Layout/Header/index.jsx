@@ -109,7 +109,7 @@ const Header = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="#">
+                <NavLink className="nav-link" to="/cloudfee-the-he-ca-phe-moi">
                   Cảm hứng CloudFee
                 </NavLink>
               </li>

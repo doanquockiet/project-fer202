@@ -1,0 +1,75 @@
+/* .cloudfee-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #aaad8a, #45392d);
+} */
+
+h1 {
+  color: #4a3c2a;
+  text-align: center;
+}
+
+h2 {
+  color: #6b5b4d;
+}
+.main-page {
+  background: linear-gradient(to right, #aaad8a, #45392d);
+}
+.cloud-fee {
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5em;
+  color: #febf3e;
+}
+
+.subtitle {
+  font-size: 2em;
+  color: #febf3e;
+}
+
+.description {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+.tagline {
+  font-style: italic;
+  color: #febf3e;
+}
+.image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.content-CremeBrulee {
+  display: block;
+}
+.video-title h1 {
+  color: #febf3e;
+  font-weight: bold;
+}
+.content-video .video {
+  display: flex;
+  justify-content: center;
+}
+.video-description p {
+  color: #f0f0f0;
+  font-size: 1em;
+  margin: 15px 150px;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 2em;
+  }
+}
