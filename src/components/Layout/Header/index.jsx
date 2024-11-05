@@ -121,7 +121,7 @@ const Header = () => {
               <li className="nav-item">
                 <NavLink
                   className="nav-link"
-                  to="https://tuyendung.thecoffeehouse.com/"
+                  to="/tuyen-dung"
                 >
                   Tuyển dụng
                 </NavLink>

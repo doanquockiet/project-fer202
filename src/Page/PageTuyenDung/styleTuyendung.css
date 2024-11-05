@@ -1,0 +1,173 @@
+.header-logo {
+    height: 54px;
+    max-width: 204px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 70px;
+}
+
+.header_tuyendung {
+    justify-content: center;
+    background: rgb(229, 121, 5);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-tab {
+    flex-wrap: wrap;
+    margin-left: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.header-tab-item {
+    padding: 8px 12px;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    cursor: pointer;
+    opacity: .6;
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.searchInput, .searchAddress {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+}
+
+.textSmall {
+    font-size: 12px;
+    color: #9E9E9E;
+    margin-bottom: 4px;
+}
+
+.searchInput input {
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 250px;
+}
+
+.searchAddress {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.searchAddress span.dropdownIcon {
+    margin-left: 8px;
+}
+
+.searchBtn {
+    display: flex;
+    align-items: center;
+    background-color: #E57905;
+    color: #FFF;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.dropdownMenu {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-top: 4px;
+    z-index: 10;
+    width: 200px;
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 12px;
+}
+
+.dropdownItem {
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.dropdownItem:hover {
+    background-color: #f0f0f0;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.icon {
+    margin-right: 20px;
+    color: red;
+}
+
+.content p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+
+.card-content {
+    background-color: #E57905;
+    height: 550px;
+    flex-direction: column;
+}
+
+
+.title-card {
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.title-card h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    align-items: start;
+}
+
+.title-card ul li {
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+}
+
+.button-link {
+    color: white;
+    background-color: #E57905;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
