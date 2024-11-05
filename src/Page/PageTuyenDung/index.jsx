@@ -29,7 +29,8 @@ const TuyenDung = () => {
         <>
             <div className="header_tuyendung d-flex">
                 <div className="header-logo">
-                    <img src="assets/logo-tuyendung.webp" alt="" />
+                    <a href="/">
+                        <img src="assets/logo-tuyendung.webp" alt="" /></a>
                 </div>
                 <div className="header-tab align-items-center d-flex">
                     <div className="header-tab-item">
@@ -87,8 +88,8 @@ const TuyenDung = () => {
                 </div>
             </div>
 
-            <div className="main_job">
-                <div className="title">
+            <div className="main_job ">
+                <div className="title1 mt-3">
                     <div className="icon">
                         <FaStar />
                     </div>

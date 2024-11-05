@@ -10,10 +10,7 @@ import ChuyenCaPhe from "./Page/PageChuyenCaPhe";
 import TeaDetail from "./components/CoffeeAndTea/TeaDetail";
 import CoffeeDetail from "./components/CoffeeAndTea/CoffeeDetail";
 import DetailsPage from "./components/Stores/DetailsPage";
-
 import TuyenDung from "./Page/PageTuyenDung";
-
-import CamHung from "./Page/CloudFeePage";
 import CloudFeePage from "./Page/CloudFeePage";
 function App() {
   return (
