@@ -8,7 +8,7 @@ import Footer from "../Layout/Footer";
 
 export default function CoffeeDetail() {
   const { id } = useParams();
-  const newpage = Coffees.find((newpage) => newpage?.id == id);
+  const newpage = Coffees.find((newpage) => newpage?.id === id);
   console.log(newpage);
   const navigate = useNavigate();
   return (

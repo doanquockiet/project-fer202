@@ -1,14 +1,14 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Teas } from "../../data/tea";
-import { Button, Card, Col, Row } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import ProuctTea from "./ProductTea";
 import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
 
 export default function TeaDetail() {
   const { id } = useParams();
-  const newpage = Teas.find((newpage) => newpage?.id == id);
+  const newpage = Teas.find((newpage) => newpage?.id === id);
   console.log(newpage);
   const navigate = useNavigate();
   return (

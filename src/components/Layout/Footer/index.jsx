@@ -1,7 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./style.css";
+import { useEffect } from "react";
 
 const Footer = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    const handleLinkClick = () => {
+      window.scrollTo(0, 0);
+    };
+    const links = document.querySelectorAll(".footer a");
+    links.forEach((link) => {
+      link.addEventListener("click", handleLinkClick);
+    });
+
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("click", handleLinkClick);
+      });
+    };
+  }, [pathname]);
   return (
     <footer className="footer bg-dark text-white py-4">
       <div className="container">
@@ -30,12 +47,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/store" className="text-white">
+                <Link to="/cua-hang" className="text-white">
                   Cửa Hàng
                 </Link>
               </li>
               <li>
-                <Link to="/careers" className="text-white">
+                <Link to="/tuyen-dung" className="text-white">
                   Tuyển dụng
                 </Link>
               </li>
@@ -79,6 +96,7 @@ const Footer = () => {
             <div className="mb-3">
               <h5>The Coffee House</h5>
               <iframe
+                title="The Coffee House"
                 src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FThe.Coffee.House.2014&tabs&width=250&height=150"
                 width="250"
                 height="150"
