@@ -10,6 +10,7 @@ import ChuyenCaPhe from "./Page/PageChuyenCaPhe";
 import TeaDetail from "./components/CoffeeAndTea/TeaDetail";
 import CoffeeDetail from "./components/CoffeeAndTea/CoffeeDetail";
 import DetailsPage from "./components/Stores/DetailsPage";
+import TuyenDung from "./Page/PageTuyenDung";
 import CloudFeePage from "./Page/CloudFeePage";
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/tea/:id" element={<TeaDetail />} />
         <Route path="/coffee/:id" element={<CoffeeDetail />} />
         <Route path="/store/:storeId" element={<DetailsPage />} />
+        <Route path="/tuyen-dung" element={<TuyenDung />} />
         <Route path="/cloudfee-the-he-ca-phe-moi" element={<CloudFeePage />} />
       </Routes>
     </BrowserRouter>
