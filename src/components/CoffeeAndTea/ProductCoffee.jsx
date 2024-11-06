@@ -1,15 +1,17 @@
 import React from 'react'
 import { Coffees } from '../../data/coffee'
 import { Card, Col, Row } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom';
 
 export default function ProductCoffee() {
+    const navigate = useNavigate();
   return (
     <div>
       <div>
       <Row className="row-cols-1 row-cols-md-2 row-cols-lg-6 container-j">
         {Coffees.map((newpage) => (
           <Col key={newpage.id} className="news-card mb-4">
-            <Card style={{height:'300px', border:'none'}}>
+            <Card style={{height:'300px', border:'none'}}  onClick={() => navigate(`/coffee/${newpage?.id}`)} >
               <Card.Img variant="top" src={newpage.image} />
               <Card.Body>
                 <Card.Title>{newpage.title}</Card.Title>

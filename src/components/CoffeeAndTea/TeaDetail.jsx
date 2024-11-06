@@ -25,6 +25,14 @@ export default function TeaDetail() {
                   <Card.Text style={{color:'red'}}>{newpage.price}</Card.Text>
                   <CardText> Date: {newpage?.date}</CardText>
                   <Button style={{ width:'100%', backgroundColor:'orange', border:'1px solid orange', fontWeight:'bold'}}  onClick ={() => navigate(`/`)} >Đặt Giao Tận Nơi </Button>
+                  <div style={{display:"flex"}}>
+                 <Card.Text style={{border:'2px solid #DCDCDC' , padding:"10px", margin:"10px", borderRadius:'5px'}}> Đào Miếng + 10.000đ </Card.Text>
+                <Card.Text style={{border:'2px solid #DCDCDC' , padding:"10px", margin:"10px", borderRadius:'5px'}}> Sốt Caramel + 10.000đ </Card.Text>
+                 </div>
+                 <div style={{display:'flex'}}>
+                 <Card.Text style={{border:'2px solid #DCDCDC' , padding:"10px", margin:"10px", borderRadius:'5px'}}> Trái Vải + 10.000đ </Card.Text>
+                 <Card.Text style={{border:'2px solid #DCDCDC' , padding:"10px", margin:"10px", borderRadius:'5px'}}> Trân châu trắng + 10.000đ </Card.Text>
+                 </div>
                  </Card.Body>
                  </Card>
                  <img style={{width:'80px', marginTop:'20px'}} src={newpage.image}/>
