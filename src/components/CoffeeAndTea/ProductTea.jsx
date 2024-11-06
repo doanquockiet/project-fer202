@@ -1,38 +1,30 @@
-import React from "react";
+import React from 'react'
+import { Teas } from '../../data/tea'
+import { Card, Col, Row } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom';
 
-import { Teas } from "../../data/tea";
-import { Card, Col, Row } from "react-bootstrap";
-
-export default function ProuctTea() {
+export default function ProductTea() {
+    const navigate = useNavigate();
   return (
-    <div className="container">
-      <Row className="row-cols-1 row-cols-md-2 row-cols-lg-6 ">
-        {Teas.map((newpage) => (
-          <Col key={newpage.id} className="news-card">
-            <Card style={{ height: "400px", border: "none" }}>
-              <Card.Img
-                variant="top"
-                style={{
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-                  height: "300px",
-                  objectFit: "cover",
-
-                  borderRadius: "5px",
-                }}
-                src={newpage.image}
-              />
-              <Card.Body>
-                <Card.Title style={{ fontSize: "18px", textAlign: "start" }}>
-                  {newpage.title}
-                </Card.Title>
-                <Card.Text style={{ textAlign: "start" }}>
-                  {newpage.price}
-                </Card.Text>
+    <div> 
+    <div>
+    <Row className="row-cols-1 row-cols-md-2 row-cols-lg-6 container-j">
+      {Teas.map((newpage) => (
+        <Col key={newpage.id} className="news-card mb-4">
+          <Card style={{height:'300px', border:'none'}}  onClick={() => navigate(`/tea/${newpage?.id}`)}>
+            <Card.Img variant="top" src={newpage.image} />
+            <Card.Body>
+              <Card.Title>{newpage.title}</Card.Title>
+              <Card.Text>{newpage.price}</Card.Text>
               </Card.Body>
+             <div className='' style={{marginLeft:'10px', marginRight:'10px' , marginBottom:'10px', justifyContent:'space-between', display:'flex'}}>
+             </div>
             </Card>
-          </Col>
-        ))}
-      </Row>
-    </div>
-  );
+        </Col>
+      ))}
+    </Row>
+  </div>
+  </div>
+  )
 }
+
