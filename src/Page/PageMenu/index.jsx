@@ -21,8 +21,8 @@ const PageMenu = () => {
     dispatch(setType(typeIndex));
   };
 
-  const handleProductClick = (product) => {
-    navigate("/detail", { state: { product } });
+  const handleProductClick = (product, relatedProducts) => {
+    navigate("/detail", { state: { product, relatedProducts } });
   };
 
   return (
