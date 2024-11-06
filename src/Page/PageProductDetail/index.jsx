@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import menuData from "../../data/dataMenu";
 import "./style.css";
 import Footer from "../../components/Layout/Footer";
 import Header from "../../components/Layout/Header";
+import SanPhamLQ from "../../components/SPLienQuan";
 
 const PageDetail = () => {
   const location = useLocation();
@@ -10,6 +12,24 @@ const PageDetail = () => {
 
   const [selectSize, setSelectSize] = useState("");
   const [selectToppings, setSelectToppings] = useState([]);
+  const [sanPhamLienQuan, setSanPhamLienQuan] = useState([]);
+
+  useEffect(() => {
+    if (product) {
+      const timLienquan = () => {
+        const related = [];
+        menuData.categories.forEach((category) => {
+          category.types.forEach((type) => {
+            if (type.items.some((item) => item.id === product.id)) {
+              related.push(...type.items.filter((item) => item.id !== product.id));
+            }
+          });
+        });
+        setSanPhamLienQuan(related.slice(0, 5));
+      };
+      timLienquan();
+    }
+  }, [product]);
 
   if (!product) {
     return <p>Product not found!</p>;
@@ -29,9 +49,7 @@ const PageDetail = () => {
 
   return (
     <>
-      <div>
-        <Header />
-      </div>
+      <Header />
       <div className="container d-flex mt-3">
         <div className="product-img col-md-6">
           <img src={product.image} alt={product.name} />
@@ -47,26 +65,18 @@ const PageDetail = () => {
           <div className="choose-size">
             <p>Chọn size (bắt buộc)</p>
             <div className="option-size d-flex">
-              <button
-                onClick={() => handleSizeClick("small")}
-                className={selectSize === "small" ? "active" : ""}
-              >
-                Nhỏ + 0 đ
-              </button>
-              <button
-                onClick={() => handleSizeClick("medium")}
-                className={selectSize === "medium" ? "active" : ""}
-              >
-                Vừa + 6.000 đ
-              </button>
-              <button
-                onClick={() => handleSizeClick("large")}
-                className={selectSize === "large" ? "active" : ""}
-              >
-                Lớn + 16.000 đ
-              </button>
+              {product.size.map((size, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleSizeClick(size)}
+                  className={selectSize === size ? "active" : ""}
+                >
+                  {size} + {index === 0 ? "0 đ" : index === 1 ? "6.000 đ" : "16.000 đ"}
+                </button>
+              ))}
             </div>
           </div>
+
           <div className="choose-topping">
             <p>Chọn Topping</p>
             <div className="option-topping">
@@ -90,6 +100,7 @@ const PageDetail = () => {
               </button>
             </div>
           </div>
+
           <div className="button-order">
             <button>Đặt Giao Tận Nơi</button>
           </div>
@@ -102,9 +113,10 @@ const PageDetail = () => {
         <p>{product.description}</p>
         <hr className="hr2" />
       </div>
-      <div>
-        <Footer />
-      </div>
+
+      {/* Hiển thị sản phẩm liên quan */}
+      <SanPhamLQ dataLqs={sanPhamLienQuan} />
+      <Footer />
     </>
   );
 };

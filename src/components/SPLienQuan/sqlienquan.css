@@ -1,0 +1,23 @@
+.sqlineuqan h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+
+.related-product-card {
+    position: relative;
+}
+
+
+.related-product-card img {
+    border-radius: 10px;
+    border: none;
+    max-width: 100%;
+    height: auto;
+    box-shadow: inset;
+}
+
+.related-product-card h4 {
+    font-size: 16px;
+    font-weight: 500;
+}
