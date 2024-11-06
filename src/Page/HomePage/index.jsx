@@ -5,6 +5,8 @@ import Banner from "../../components/Banner";
 import BestSeller from "../../components/BestSeller";
 import TraXanhTayBac from "../../components/TraXanhTayBac";
 import ChuyenNha from "../PageChuyenNha";
+import PopupContact from "../../components/PopUpContact";
+import "./style.css";
 
 const HomePage = () => {
   return (
@@ -16,6 +18,9 @@ const HomePage = () => {
         <Banner />
       </div>
       <div className="main-body">
+        <div className="popup">
+          <PopupContact />
+        </div>
         <BestSeller />
         <TraXanhTayBac />
         <ChuyenNha />
