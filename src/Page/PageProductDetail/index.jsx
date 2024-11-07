@@ -113,8 +113,6 @@ const PageDetail = () => {
         <p>{product.description}</p>
         <hr className="hr2" />
       </div>
-
-      {/* Hiển thị sản phẩm liên quan */}
       <SanPhamLQ dataLqs={sanPhamLienQuan} />
       <Footer />
     </>
